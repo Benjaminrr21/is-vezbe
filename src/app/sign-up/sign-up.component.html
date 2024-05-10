@@ -1,0 +1,12 @@
+<p>Registracija</p>
+<form [formGroup]='form'>
+<div class="form-group">
+  <label for="username">Username</label>
+  <input type="text" name="username" id="username" class="form-control" formControlName='username'>
+</div>
+<div *ngIf="Username.touched && Username.invalid">
+    
+</div>
+<button (click)='validateForm()'>Validate form</button>
+</form>
+<br><br>
