@@ -1,5 +1,9 @@
 <nav class="nav nav-pills nav-stacked">
-    <a class="nav-link" [routerLink]="['']" routerLinkActive="active" ]>Home</a>
-    <a class="nav-link" [routerLink]="['authors']" routerLinkActive="active" ]>Authors</a>
-    <a class="nav-link" [routerLink]="['courses']" routerLinkActive="active" ]>Courses</a>
+    <a class="nav-link" [routerLink]="['']" routerLinkActive="active" >Home</a>
+    <a class="nav-link" [routerLink]="['authors']" routerLinkActive="active" >Authors</a>
+    <a class="nav-link" [routerLink]="['courses']" routerLinkActive="active" >Courses</a>
+    <a class="nav-link" [routerLink]="['login']"  routerLinkActive="active" >Login</a>
+    
+    <button (click)='logout()' *ngIf="isLogedIn" class="btn btn-danger">Logout</button>
 </nav>
+<p>aa</p>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,10 @@ export class AuthorsService {
   constructor(private http:HttpClient) { }
 
   getAll(){
-    return this.http.get<Author[]>(this.url + "authors");
+    return this.http.get<Author[]>(this.url + "authors", {
+      "headers":new Headers()
+        .set("Authorization","Bearer" + token)
+    });
   }
   addAuthor(author:Author){
     return this.http.post<Author>(this.url + "authors",author);
